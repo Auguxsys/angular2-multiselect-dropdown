@@ -199,8 +199,10 @@ export class AngularMultiSelect implements OnInit, ControlValueAccessor, OnChang
             this.selectedItems = [];
             this.selectedItems.push(item);
         }
-        else
+        else{
+            this.selectedItems = this.selectedItems || [];
             this.selectedItems.push(item);
+        }
         if (this.selectedItems.length > 0) {
             this.parseError = false;
         }
